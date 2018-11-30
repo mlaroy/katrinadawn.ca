@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+
+* {
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Catamaran', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 0;
+  padding: 0px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+main {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+
+
+header,
+section,
+footer {
+  text-align: center;
+}
+
+
+header {
+  /* min-height: 450px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* background: url('/assets/images/pirate-ship.jpg') no-repeat bottom right;
+  background-size: 50%; */
+
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header-content {
+  padding: 0 2rem;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+
+section {
+  // min-height: 100vh;
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.bg-color {
+   background: #ecebf8;
+}
+
+footer {
+  width: 100%;
+  padding: 3rem 0;
+}
+p {
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen-reader {
+  position: absolute;
+  left: -99999px;
+}
+
+.logo-img {
+  display: block;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.ship-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 50%;
+  /* width: 600px;
+  height: auto;
+  margin: 0 auto; */
+}
+
+footer .logo-img {
+  max-width: 150px;
+}
+
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  background: #fff;
+   border-radius: 5px;
+  color: #222;
+  border: 1px solid #fff;
+  text-decoration: none;
+  transiton: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  // filter: brightness(85%);
+  background: #f7f8eb;
+  border-color: #f7f8eb;
+}
+
+.btn + .btn {
+  margin-left: 1rem;
+}
+
+.instafeed {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.instafeed a {
+  flex-basis: 50%;
+  max-width: 300px;
+  padding-bottom: 300px;
+  max-height: 300px;
+  overflow: hidden;
+   position: relative;
+}
+
+@media screen and (min-width: 480px) {
+  .instafeed a {
+    flex-basis: 25%;
+  }
+}
+
+
+
+.instafeed img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instafeed a {
+  transition: opacity 0.3s ease;
+}
+.instafeed a:hover {
+  opacity: 0.7;
+}
+
+.instafeed.is-hidden {
+  opacity: 0;
+}
+.instafeed.is-visible {
+  animation-name: fadeIn;
+}

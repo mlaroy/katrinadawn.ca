@@ -1,0 +1,43 @@
+import React, { Component } from 'react';
+import logo from '../images/logo.png';
+import ship from '../images/pirate-ship.jpg';
+
+class Hero extends Component {
+  constructor(props){
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  state = {
+    transform: ''
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    this.setState({
+      transform: `translate3d(0, ${scrolled * 0.3}px, 0)`
+    })
+  }
+
+  render() {
+    const { transform } = this.state;
+    return (
+      <header>
+        <div className="header-content" style={{ transform }}>
+          <h1>
+            <span className="screen-reader">Katrina Dawn Studio</span>
+            <img src={logo} alt="Katrina Dawn Studio Logo" className="logo-img" />
+            <small>Watercolour sketcher specializing in commissions.</small>
+          </h1>
+          <p>Commissions • Local Prints &amp; Stationery • Originals • Photography</p>
+          <p>Vancouver, BC</p>
+        </div>
+        <img src={ship} alt="Katrina Dawn Studio Logo" className="ship-img" />
+      </header>
+    );
+  }
+}
+
+export default Hero;
