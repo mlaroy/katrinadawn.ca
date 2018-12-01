@@ -12,11 +12,11 @@ const Instagram = () => (
             <div id="instafeed" className="instafeed is-visible">
               {allInstagramContent.edges.map(edge => {
                 return (
-                  <a href={edge.node.link}>
+                  <a href={edge.node.link} key={edge.node.id}>
                     <img
                       alt={`${edge.node.caption.text.substring(0, 100)}...`}
                       src={edge.node.images.standard_resolution.url}
-                      key={edge.node.id} />
+                      />
                   </a>
                 )
               })}

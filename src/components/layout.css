@@ -1,3 +1,7 @@
+@tailwind preflight;
+
+@tailwind components;
+
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 
 * {
@@ -27,11 +31,13 @@ h1 {
 
 h2 {
   margin-top: 0;
+  margin-bottom: 2rem;
   padding: 0px;
 }
 
 p {
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -217,3 +223,5 @@ footer .logo-img {
 .instafeed.is-visible {
   animation-name: fadeIn;
 }
+
+@tailwind utilities;
