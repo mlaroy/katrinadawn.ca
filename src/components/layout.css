@@ -171,6 +171,10 @@ footer .logo-img {
   text-align: center;
 }
 
+.instafeed .error {
+  margin: 0 auto;
+}
+
 .instafeed a {
   flex-basis: 50%;
   max-width: 300px;

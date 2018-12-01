@@ -1,55 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby'
 
-class Instagram extends Component {
-  state = {
-    data: [],
-    error: false
-  }
-  componentDidMount() {
-    this.fetchPosts();
-  }
+const Instagram = () => (
+  <StaticQuery
+    query={INSTA_QUERY}
+    render={({ allInstagramContent }) => (
+      <>
+        <section>
+          <div className="container">
+            <h2>See me on Instagram</h2>
+            <div id="instafeed" className="instafeed is-visible">
+              {allInstagramContent.edges.map(edge => {
+                return (
+                  <a href={edge.node.link}>
+                    <img
+                      alt={`${edge.node.caption.text.substring(0, 100)}...`}
+                      src={edge.node.images.standard_resolution.url}
+                      key={edge.node.id} />
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      </>
+    )}
+  />
+)
 
-  fetchPosts = async () => {
-    const token = process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN;
-    const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${token}`;
-    try {
-      const response = await fetch(url);
-      const json = await response.json();
-      this.setState({
-        data: [...json.data]
-      })
-
-    }catch(err){
-      console.warn(err);
-      this.setState({
-        error: true
-      })
+const INSTA_QUERY = graphql`
+  query InstaQuery {
+    allInstagramContent(limit: 20) {
+      edges {
+        node {
+          id
+          link
+          caption {
+            text
+          }
+          images {
+            standard_resolution {
+              url
+            }
+          }
+        }
+      }
     }
   }
-
-  render() {
-    const { data, error } = this.state;
-    return (
-      <section>
-        <div className="container">
-          <h2>See me on Instagram</h2>
-          <div id="instafeed" className="instafeed is-visible">
-            {data.map(post => {
-              return (
-                <a href={post.link} key={post.id}>
-                  <img src={post.images.standard_resolution.url} alt={post.caption.text}/>
-                </a>
-              )
-            })}
-            {error && showError()}
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
+`
 
 export default Instagram;
-
-
-const showError = () => <h3>Unfortunately there has been an error getting the posts from Instagram...</h3>

@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Katrina Dawn',
@@ -11,6 +15,12 @@ module.exports = {
       options: {
         // Add any options here
       },
+    },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: process.env.INSTAGRAM_ACCESS_TOKEN
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
