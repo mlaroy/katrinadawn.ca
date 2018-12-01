@@ -168,6 +168,7 @@ footer .logo-img {
   margin: 3rem 0;
   animation-duration: 2s;
   animation-fill-mode: both;
+  text-align: center;
 }
 
 .instafeed a {
@@ -176,7 +177,7 @@ footer .logo-img {
   padding-bottom: 300px;
   max-height: 300px;
   overflow: hidden;
-   position: relative;
+  position: relative;
 }
 
 @media screen and (min-width: 480px) {
