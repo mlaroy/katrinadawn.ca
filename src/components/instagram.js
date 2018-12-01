@@ -10,7 +10,8 @@ class Instagram extends Component {
   }
 
   fetchPosts = async () => {
-    const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`;
+    const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+    const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${token}`;
     try {
       const response = await fetch(url);
       const json = await response.json();
