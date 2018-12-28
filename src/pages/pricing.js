@@ -12,8 +12,8 @@ class Pricing extends Component {
         <Section>
           <h1 className="mb-4">Pricing</h1>
           <div className="w-3/4 mb-8">
-            <p>Katrina offers a number of standard sizes for commissions. Note that Katrina’s fresh, artistic style includes a one-inch white border on all watercolour sketches, unless the subject requires otherwise. Each size has a range of price depending on the complexity of the piece. All dimensions are in inches.
-              Please note that custom sizes can be accommodated. Prices listed are in Canadian dollars.</p>
+            <p>Katrina offers a number of standard sizes for commissions. Her fresh, artistic style includes a one-inch white border on all watercolour sketches, unless the subject requires otherwise. Each size has a range of price depending on the complexity of the piece. All dimensions are in inches.
+              Custom sizes can also be accommodated. Prices listed are in Canadian dollars.</p>
           </div>
           <PricingTable />
         </Section>
