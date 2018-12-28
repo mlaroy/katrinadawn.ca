@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout';
 import Section from '../components/Section';
-import Bumper from '../components/Bumper';
+import Bumper from '../components/bumper';
 import { Link } from 'gatsby';
 
 class About extends Component {
