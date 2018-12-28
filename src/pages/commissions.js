@@ -11,7 +11,7 @@ class Commissions extends Component {
       <Layout>
         <Section>
           <h1 className="mb-4">Commissions</h1>
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             <p>
               While Katrina enjoys painting subject matter of her own choosing, she is often contacted for commissions.
               Commissions are subject matter of the customer’s choosing, but over the years two prominent themes have emerged: Pet Portraits and Home Portraits. Below is a select sampling of watercolour sketches that Katrina has done over the years for clients on each theme. </p>

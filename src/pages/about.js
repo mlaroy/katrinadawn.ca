@@ -10,7 +10,7 @@ class About extends Component {
       <Layout>
         <Section>
           <h1 className="mb-4">About Katrina Dawn</h1>
-          <div className="w-3/4">
+          <div className="lg:w-3/4">
             <p>
               Katrina Dawn is a watercolour sketcher residing in the Fraser Valley, BC with her husband, Michael. Although she has dabbled in many different art mediums, the unpredictable and unforgiving nature of watercolour poses a unique challenge and has captured her interests now exclusively.
               Its portable nature lends itself to plein-air painting, which is Katrina’s preferred creative environment.
