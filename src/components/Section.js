@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Bumper extends Component {
+class Section extends Component {
   render() {
-    const { children } = this.props;
+    const { css, children } = this.props;
     return (
-      <section className="bg-color text-center">
+      <section className={css}>
         <div className="container">
           {children}
         </div>
@@ -13,4 +13,4 @@ class Bumper extends Component {
   }
 }
 
-export default Bumper;
+export default Section;

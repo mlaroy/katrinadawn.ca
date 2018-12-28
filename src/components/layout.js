@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import Nav from './Nav';
+import Footer from './footer';
 
 import './layout.css'
 
@@ -27,7 +29,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+          <Nav />
           {children}
+          <Footer />
       </>
     )}
   />

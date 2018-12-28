@@ -55,7 +55,6 @@ main {
 
 
 header,
-section,
 footer {
   text-align: center;
 }
@@ -90,6 +89,10 @@ header {
   animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeIn;
+}
+
+.nav-link {
+  @apply .ml-4 .no-underline;
 }
 
 
@@ -153,7 +156,7 @@ footer .logo-img {
   color: #222;
   border: 1px solid #fff;
   text-decoration: none;
-  transiton: all 0.2s ease;
+  transition: all 0.2s ease;
   font-size: 1rem;
 }
 
