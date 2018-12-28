@@ -33,7 +33,7 @@ const Instagram = props => (
 
 const INSTA_QUERY = graphql`
   query petPortraitQuery {
-    allInstagramContent(limit: 20, filter: {
+    allInstagramContent(limit: 8, filter: {
       tags: {
         eq: "petportrait"
       }

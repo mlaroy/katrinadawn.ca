@@ -35,7 +35,7 @@ const Instagram = props => (
 
 const INSTA_QUERY = graphql`
   query homePortraitQuery {
-    allInstagramContent(limit: 20, filter: {
+    allInstagramContent(limit: 8, filter: {
       tags: {
         eq: "homeportrait"
       }
