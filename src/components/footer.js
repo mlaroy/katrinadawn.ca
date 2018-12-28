@@ -7,9 +7,10 @@ class Footer extends Component {
     return (
       <footer>
         <img src={logo} alt="Katrina Dawn Studio Logo" className="logo-img" />
-        <p>
+        <p className="mb-0">
           <small>© {year} KatrinaDawnStudio. All rights reserved.</small>
         </p>
+        <p className="text-xs">Website by <a className="link" href="https://mikelaroy.ca">Michael LaRoy</a></p>
       </footer>
     );
   }
