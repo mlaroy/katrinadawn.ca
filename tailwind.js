@@ -208,6 +208,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      'Libre Baskerville',
       'Copse',
       'Constantia',
       'Lucida Bright',

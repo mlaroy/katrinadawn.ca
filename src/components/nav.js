@@ -9,6 +9,7 @@ class Nav extends Component {
           <Link to="/" className="nav-link hover:underline focus:underline">Home</Link>
           <Link to="/about" className="nav-link hover:underline focus:underline">About</Link>
           <Link to="/commissions" className="nav-link hover:underline focus:underline">Commissions</Link>
+          <Link to="/pricing" className="nav-link hover:underline focus:underline">Pricing</Link>
         </nav>
       </div>
     );

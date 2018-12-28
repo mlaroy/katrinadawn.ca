@@ -29,10 +29,9 @@ class Hero extends Component {
           <h1>
             <span className="screen-reader">Katrina Dawn Studio</span>
             <img src={logo} alt="Katrina Dawn Studio Logo" className="logo-img" />
-            <small>Watercolour sketcher specializing in commissions.</small>
+            <small>watercolour sketcher</small>
           </h1>
-          <p>Commissions • Local Prints &amp; Stationery • Originals • Photography</p>
-          <p>Vancouver, BC</p>
+          <p>Fraser Valley, BC</p>
         </div>
         <img src={ship} alt="Katrina Dawn Studio Logo" className="ship-img" />
       </header>

@@ -7,8 +7,8 @@ const Instagram = () => (
     render={({ allInstagramContent }) => (
       <>
         <section>
-          <div className="container">
-            <h2>See me on Instagram</h2>
+          <div className="container text-center">
+            <h2>See Katrina Dawn on Instagram</h2>
             <div id="instafeed" className="instafeed is-visible">
               {allInstagramContent.edges.map(edge => {
                 return (
