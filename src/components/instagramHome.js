@@ -6,7 +6,7 @@ const Instagram = props => (
     query={INSTA_QUERY}
     render={({ allInstagramContent }) => (
       <>
-        <section className="bg-grey-lighter">
+        <section className="bg-brown-light">
           <div className="container">
             <h2>Home Portraits</h2>
             <div className="lg:w-3/4">
