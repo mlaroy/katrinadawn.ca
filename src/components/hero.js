@@ -25,7 +25,7 @@ class Hero extends Component {
     const { transform } = this.state;
     return (
       <header>
-        <div className="header-content" style={{ transform }}>
+        <div className="header-content fade-in" style={{ transform }}>
           <h1>
             <span className="screen-reader">Katrina Dawn Studio</span>
             <img src={logo} alt="Katrina Dawn Studio Logo" className="logo-img" />
@@ -33,7 +33,7 @@ class Hero extends Component {
           </h1>
           <p>Fraser Valley, BC</p>
         </div>
-        <img src={parliament} alt="Katrina Dawn Studio Logo" className="ship-img" />
+        <img src={parliament} alt="Katrina Dawn Studio Logo" className="ship-img fade-in" />
       </header>
     );
   }

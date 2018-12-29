@@ -88,13 +88,16 @@ header {
     opacity: 1;
   }
 }
-
-.header-content {
-  padding: 0 2rem;
+.fade-in {
   animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeIn;
 }
+
+.header-content {
+  padding: 0 2rem;
+}
+
 
 .link {
   @apply .text-blue-darker;
