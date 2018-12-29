@@ -62,16 +62,20 @@ footer {
 
 
 header {
-  /* min-height: 450px; */
   height: 100vh;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   overflow: hidden;
-  /* background: url('/assets/images/pirate-ship.jpg') no-repeat bottom right;
-  background-size: 50%; */
 
+}
+@media (min-width: 767px) {
+  header {
+    min-height: 700px;
+    min-height: 120vh;
+    padding-top: 7vh;
+  }
 }
 
 
@@ -140,13 +144,16 @@ p {
 
 .ship-img {
   position: absolute;
-  bottom: 0;
-  right: 0;
   z-index: -1;
-  max-width: 50%;
-  /* width: 600px;
-  height: auto;
-  margin: 0 auto; */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  bottom: 0;
+}
+@media (min-width: 767px) {
+  .ship-img {
+    max-width: 70%;
+  }
 }
 
 footer .logo-img {

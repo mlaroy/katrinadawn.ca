@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png';
-import ship from '../images/pirate-ship.jpg';
+import parliament from '../images/parliament.jpg';
 
 class Hero extends Component {
   constructor(props){
@@ -33,7 +33,7 @@ class Hero extends Component {
           </h1>
           <p>Fraser Valley, BC</p>
         </div>
-        <img src={ship} alt="Katrina Dawn Studio Logo" className="ship-img" />
+        <img src={parliament} alt="Katrina Dawn Studio Logo" className="ship-img" />
       </header>
     );
   }
