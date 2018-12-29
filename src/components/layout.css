@@ -38,6 +38,7 @@ h2 {
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  @apply .leading-normal;
 }
 
 @media screen and (min-width: 480px) {
