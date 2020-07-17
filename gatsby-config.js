@@ -17,10 +17,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram-all`,
+      resolve: `gatsby-source-instagram`,
       options: {
-        access_token: process.env.INSTAGRAM_ACCESS_TOKEN
-      }
+        username: `katrinadawnstudio`,
+        access_token: process.env.INSTAGRAM_ACCESS_TOKEN,
+        instagram_id: process.env.INSTAGRAM_ID,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

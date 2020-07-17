@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 const Instagram = props => (
   <StaticQuery
     query={INSTA_QUERY}
-    render={({ allInstagramContent }) => (
+    render={({ allInstaNode }) => (
       <>
         <section className="bg-brown-light">
           <div className="container">
@@ -15,12 +15,12 @@ const Instagram = props => (
                 The recommended minimum size for a home portrait is 8x10.</p>
             </div>
             <div id="instafeed" className="instafeed is-visible">
-              {allInstagramContent.edges.map(edge => {
+              {allInstaNode.edges.map(edge => {
                 return (
-                  <a href={edge.node.link} key={edge.node.id}>
+                  <a href={`https://www.instagram.com/p/${edge.node.id}`} key={edge.node.id}>
                     <img
-                      alt={`${edge.node.caption.text.substring(0, 100)}...`}
-                      src={edge.node.images.standard_resolution.url}
+                      alt={`${edge.node.caption.substring(0, 100)}...`}
+                      src={edge.node.original}
                       />
                   </a>
                 )
@@ -35,22 +35,29 @@ const Instagram = props => (
 
 const INSTA_QUERY = graphql`
   query homePortraitQuery {
-    allInstagramContent(limit: 8, filter: {
-      tags: {
-        eq: "homeportrait"
+    allInstaNode(
+      limit: 8
+      filter: {
+        caption: {
+          regex: "/#homeportrait/"
+        }
       }
-    }){
+      sort: {
+        fields: timestamp
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id
-          link
-          caption {
-            text
-          }
-          images {
-            standard_resolution {
-              url
-            }
+          caption
+          preview
+          original
+          mediaType
+          internal {
+            type
+            contentDigest
+            owner
           }
         }
       }
