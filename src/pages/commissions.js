@@ -13,9 +13,15 @@ class Commissions extends Component {
           <h1 className="mb-4">Commissions</h1>
           <div className="lg:w-3/4">
             <p>
-              While Katrina enjoys painting subject matter of her own choosing, she is often contacted for commissions.
-              Commissions are subject matter of the customer’s choosing, but over the years two prominent themes have emerged: Pet Portraits and Home Portraits. Below is a select sampling of watercolour sketches that Katrina has done over the years for clients on each theme. </p>
-            <p>Please <a href="#contact" className="link hover:underline focus:underline">contact</a> her if you are interested in a commission.</p>
+              It is an honour to capture a personal story in a painting.
+            </p>
+            <p>
+              The best response I get upon delivering a commission is tears. Tears signify that I struck a chord; that I captured an essence known to the recipient. That I did my job as an artist and was attentive to detail, persistent in mixing the precise shade of colour needed, and able through my brush and pen strokes to transform a memory into a piece of art.
+            </p>
+            <p>
+              Two themes of commissions have emerged over the years: Home Portraits and Pet Portraits.
+            </p>
+            <p>Please <a href="#contact" className="link hover:underline focus:underline">contact</a> me if you are interested in a commission.</p>
           </div>
         </Section>
         <InstagramHome tag="homeportrait"/>

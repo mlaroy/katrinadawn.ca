@@ -10,7 +10,12 @@ const Instagram = props => (
           <div className="container">
             <div className="lg:w-3/4">
               <h2>Pet Portraits</h2>
-              <p>Pet portraits are most often commissioned for families who have lost a pet. Multiple photos of the pet are submitted to the artist for reference. The recommended minimum size for a pet portrait is 6x8.</p>
+              <p>
+                A pet is like another member of the family. Who but the family can recall with fondness the rambunctious puppy years, sassy swing of a cat tail, or just comfort of their presence? Sometimes your pet is truly the best company.
+              </p>
+              <p>
+              Clients should submit multiple photos. Clear photos taken with good natural light are best to showcase the colour of the fur/hair Be sure to send a photo capturing the eyes and avoid sending photos taken with a flash.
+              The recommended minimum size for a pet portrait is 6x8.</p>
             </div>
             <div id="instafeed" className="instafeed is-visible">
               {allInstaNode.edges.map(edge => {

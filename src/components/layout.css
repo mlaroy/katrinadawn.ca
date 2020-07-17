@@ -109,7 +109,6 @@ header {
 
 
 section {
-  // min-height: 100vh;
   height: auto;
   padding: 4rem 1rem;
 }
@@ -177,7 +176,6 @@ footer .logo-img {
 
 .btn:hover,
 .btn:focus {
-  // filter: brightness(85%);
   background: #f7f8eb;
   border-color: #f7f8eb;
 }

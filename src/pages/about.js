@@ -12,14 +12,13 @@ class About extends Component {
           <h1 className="mb-4">About Katrina Dawn</h1>
           <div className="lg:w-3/4">
             <p>
-              Katrina Dawn is a watercolour sketcher residing in the Fraser Valley, BC with her husband, Michael. Although she has dabbled in many different art mediums, the unpredictable and unforgiving nature of watercolour poses a unique challenge and has captured her interests now exclusively.
-              Its portable nature lends itself to plein-air painting, which is Katrina’s preferred creative environment.
+              My name is Katrina and I’m a watercolour sketcher residing in the Fraser Valley, British Columbia, Canada, along with my husband Michael.
+              I’ve dabbled in a variety of art mediums over the decades, but have settled into this: the unpredictable and unforgiving nature of watercolour.
+              It is a magical medium, and when combined with sharp pen strokes, it’s a match made in heaven.
+              The portable nature of the medium also lends itself to plein-air painting,
+              which is easily one of my favourite activities.
             </p>
-            <p>
-              Although naturally drawn to urban sketching, Katrina is frequently commissioned for both home and pet portraits.
-              The challenge of depicting personal material in an authentic yet artistic manner is a welcome one.
-            </p>
-            <p>Katrina has also worked with a number of corporate clients, increasing brand awareness through an artistic rendering of their brands.</p>
+            <p>Thanks for stopping by. I hope my art has brought a dose of inspiration to your day.</p>
           </div>
         </Section>
         <Bumper>
