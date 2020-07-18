@@ -16,7 +16,7 @@ class Commissions extends Component {
               It is an honour to capture a personal story in a painting.
             </p>
             <p>
-              The best response I get upon delivering a commission is tears. Tears signify that I struck a chord; that I captured an essence known to the recipient. That I did my job as an artist and was attentive to detail, persistent in mixing the precise shade of colour needed, and able through my brush and pen strokes to transform a memory into a piece of art.
+              The best response I get upon delivering a commission is tears. Tears signify that I struck a chord; that I captured an <em>essence</em> known to the recipient. That I did my job as an artist and was attentive to detail, persistent in mixing the precise shade of colour needed, and able through my brush and pen strokes to transform a memory into a piece of art.
             </p>
             <p>
               Two themes of commissions have emerged over the years: Home Portraits and Pet Portraits.
