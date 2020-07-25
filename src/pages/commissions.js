@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import Section from '../components/Section';
 import InstagramHome from '../components/instagramHome'
 import InstagramPets from '../components/instagramPets'
+import InstagramCorporate from '../components/instagramCorporate'
 import Bumper from '../components/bumper'
 
 class Commissions extends Component {
@@ -21,12 +22,12 @@ class Commissions extends Component {
             <p>
               Two themes of commissions have emerged over the years: Home Portraits and Pet Portraits.
             </p>
-            <p>Please <a href="#contact" className="link hover:underline focus:underline">contact</a> me if you are interested in a commission.</p>
           </div>
         </Section>
-        <InstagramHome tag="homeportrait"/>
-        <InstagramPets tag="petportrait"/>
-        <Bumper>
+        <InstagramHome/>
+        <InstagramPets/>
+        <InstagramCorporate />
+        <Bumper bg="bg-white">
           <h2>Contact Katrina Dawn for commissions</h2>
           <p>
             <a id="contact" href="mailto:hell%6F@ka%74rinad%61w%6E.c%61?subject=I%20would%20like%20to%20commission%20a%20painting" className="btn">Send her an email</a>
