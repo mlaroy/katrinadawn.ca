@@ -166,7 +166,7 @@ footer .logo-img {
 .btn {
   padding: 0.4rem 0.8rem;
   background: #fff;
-   border-radius: 5px;
+  border-radius: 5px;
   color: #222;
   border: 1px solid #fff;
   text-decoration: none;
@@ -174,11 +174,24 @@ footer .logo-img {
   font-size: 1rem;
 }
 
+.btn.btn-inverse {
+  background: #e6e9df;
+  border-radius: 5px;
+  color: #222;
+  border: 1px solid #e6e9df;
+}
+
 .btn:hover,
 .btn:focus {
   background: #f7f8eb;
   border-color: #f7f8eb;
 }
+
+/* .btn.btn-inverse:hover,
+.btn.btn-inverse:focus {
+  background: #ecebf8;
+  border-color: #ecebf8;
+} */
 
 .btn + .btn {
   margin-left: 1rem;

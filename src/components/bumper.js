@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class Bumper extends Component {
   render() {
-    const { children, bgClass } = this.props;
-    const bg = bgClass ? 'bg-brown-light' : bgClass;
+    const { children, bg } = this.props;
+    const bgClass = bg ? bg : 'bg-brown-light';
     return (
-      <section className={`${bg} text-center`}>
+      <section className={`${bgClass} text-center`}>
         <div className="container">
           {children}
         </div>
