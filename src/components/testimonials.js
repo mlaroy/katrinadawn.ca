@@ -5,7 +5,7 @@ import Slider from 'react-slick'
 const Testimonials = () => (
   <StaticQuery
     query={TESTIMONIAL_QUERY}
-    render={({allMarkdownRemark}) => {
+    render={({ allMarkdownRemark }) => {
       const settings = {
         dots: true,
         autoplay: true,
