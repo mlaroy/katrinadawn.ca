@@ -19,9 +19,9 @@ const Testimonials = () => (
       };
       return (
         <>
-          <section style={{ background: '#ecebf8'}}>
+          <section className="testimonials-container">
             <div className="container">
-              <h2 className="text-center">Client testimonials</h2>
+              <h2 className="text-center">Testimonials</h2>
               <Slider {...settings} className="md:w-4/5 mx-auto testimonials">
                 {allMarkdownRemark.edges.map(edge => {
                   const { name, location, quote } = edge.node.frontmatter;

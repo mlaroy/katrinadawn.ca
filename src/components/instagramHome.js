@@ -6,7 +6,7 @@ const Instagram = props => (
     query={INSTA_QUERY}
     render={({ allInstaNode }) => (
       <>
-        <section className="bg-brown-light">
+        <section style={{ background: '#ddd'}}>
           <div className="container">
             <h2>Home Portraits</h2>
             <div className="lg:w-3/4">
@@ -18,7 +18,7 @@ const Instagram = props => (
                 The recommended minimum size for a home portrait is 8x10.
               </p>
             </div>
-            <div id="instafeed" className="instafeed is-visible">
+            <div id="instafeed" className="instafeed is-visible mt-8">
               {allInstaNode.edges.map(edge => {
                 return (
                   <a href={`https://www.instagram.com/p/${edge.node.id}`} key={edge.node.id}>

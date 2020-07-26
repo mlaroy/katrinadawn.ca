@@ -21,7 +21,7 @@ const IndexPage = () => (
     <Bumper>
       <h2>Contact Katrina Dawn for commissions</h2>
       <p>
-        <a href="mailto:hell%6F@ka%74rinad%61w%6E.c%61" className="btn">Send her an email</a>
+        <a href="mailto:hell%6F@ka%74rinad%61w%6E.c%61" className="btn">Send me an email</a>
       </p>
     </Bumper>
   </Layout>

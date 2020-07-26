@@ -6,7 +6,7 @@ const Instagram = props => (
     query={INSTA_QUERY}
     render={({ allInstaNode }) => (
       <>
-        <section className="bg-brown-light" id="corporate">
+        <section style={{ background: '#ddd'}} id="corporate">
           <div className="container">
             <div className="lg:w-3/4">
               <h2>Corporate</h2>
@@ -15,7 +15,7 @@ const Instagram = props => (
                 Below are a few corporate customers that I have worked with.
               </p>
             </div>
-            <div id="instafeed" className="instafeed is-visible">
+            <div id="instafeed" className="instafeed is-visible mt-8">
               {allInstaNode.edges.map(edge => {
                 return (
                   <a href={edge.node.link} key={edge.node.id}>

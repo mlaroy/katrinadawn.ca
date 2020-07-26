@@ -27,7 +27,7 @@ class Pricing extends Component {
         <Bumper>
           <h2>Contact Katrina Dawn for commissions</h2>
           <p>
-            <a id="contact" href="mailto:hell%6F@ka%74rinad%61w%6E.c%61?subject=I%20would%20like%20to%20commission%20a%20painting" className="btn">Send her an email</a>
+            <a id="contact" href="mailto:hell%6F@ka%74rinad%61w%6E.c%61?subject=I%20would%20like%20to%20commission%20a%20painting" className="btn">Send me an email</a>
           </p>
         </Bumper>
       </Layout>
