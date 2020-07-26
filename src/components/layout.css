@@ -257,4 +257,18 @@ footer .logo-img {
   animation-name: fadeIn;
 }
 
+.testimonials .slick-dots li button:before {
+  @apply .text-white .text-sm;
+}
+.testimonials .slick-dots li.slick-active button:before {
+  @apply .text-white;
+}
+
+.testimonials::before {
+  content: open-quote;
+  @apply .text-5xl;
+  position: absolute;
+  top: -5px;
+}
+
 @tailwind utilities;
