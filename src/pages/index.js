@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Instagram from '../components/instagram'
+import Testimonials from '../components/testimonials'
 import Bumper from '../components/bumper'
 
 const IndexPage = () => (
@@ -16,6 +17,7 @@ const IndexPage = () => (
       </p>
     </Bumper>
     <Instagram />
+    <Testimonials />
     <Bumper>
       <h2>Contact Katrina Dawn for commissions</h2>
       <p>

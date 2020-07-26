@@ -19,7 +19,7 @@ const Testimonials = () => (
       };
       return (
         <>
-          <section className="text-white bg-dark-teal">
+          <section style={{ background: '#ecebf8'}}>
             <div className="container">
               <h2 className="text-center">Client testimonials</h2>
               <Slider {...settings} className="md:w-4/5 mx-auto testimonials">
