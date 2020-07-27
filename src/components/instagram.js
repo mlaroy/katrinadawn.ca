@@ -41,14 +41,7 @@ const INSTA_QUERY = graphql`
         node {
           id
           caption
-          preview
           original
-          mediaType
-          internal {
-            type
-            contentDigest
-            owner
-          }
         }
       }
     }

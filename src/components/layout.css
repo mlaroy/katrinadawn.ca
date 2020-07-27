@@ -7,11 +7,6 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-:root {
-  --c-dark-grey: #979996;
-  --c-light-grey: #D0D0D0;
-}
-
 * {
   box-sizing: border-box;
   -webkit-backface-visibility: hidden;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby'
 
-const Instagram = props => (
+const InstagramCorporate = props => (
   <StaticQuery
     query={INSTA_QUERY}
     render={({ allInstaNode }) => (
@@ -35,7 +35,7 @@ const Instagram = props => (
 );
 
 const INSTA_QUERY = graphql`
-  query corporateQuery {
+  query CorporateQuery {
     allInstaNode(
       limit: 4
       filter: {
@@ -52,18 +52,11 @@ const INSTA_QUERY = graphql`
         node {
           id
           caption
-          preview
           original
-          mediaType
-          internal {
-            type
-            contentDigest
-            owner
-          }
         }
       }
     }
   }
 `
 
-export default Instagram;
+export default InstagramCorporate;
