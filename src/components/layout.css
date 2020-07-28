@@ -65,8 +65,8 @@ footer {
 
 
 header {
-  height: 100vh;
-  min-height: 600px;
+  height: 80vh;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -142,9 +142,16 @@ p {
 .logo-img {
   display: block;
   max-width: 100%;
-  width: 450px;
+  width: 180px;
   height: auto;
   margin: 0 auto;
+  padding-left: 1rem;
+}
+
+@media (min-width: 767px) {
+  .logo-img {
+    width: 450px;
+  }
 }
 
 .ship-img {
