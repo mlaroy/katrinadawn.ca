@@ -287,4 +287,33 @@ footer .logo-img {
   background: var(--c-dark-grey);
 } */
 
+.blog-post {
+  max-width: 880px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* .blog-post .featured-image {
+  width: 100vw;
+}
+
+.blog-post .featured-image img {
+  max-width: 100%;
+} */
+
+.blog-post-content img {
+  display: block;
+  max-width: none;
+  margin: 40px 0;
+  width: 100%;
+}
+
+.blog-roll {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+}
+
+
+
 @tailwind utilities;

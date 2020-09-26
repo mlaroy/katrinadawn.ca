@@ -1,0 +1,100 @@
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import Section from '../components/Section';
+import { formatDate } from '../utils/dates';
+import Helmet from 'react-helmet';
+
+
+const BlogPost = ({ data }) => {
+  const { title, bodyText, featuredImage, tags, date } = data.contentfulBlogPost;
+  const { site } = data;
+  console.log({featuredImage});
+  return (
+    <Layout>
+      <Helmet
+        meta={[
+            {
+              name: 'description',
+              content: bodyText.childMarkdownRemark.excerpt
+            },
+            {
+              property: `og:title`,
+              content: `${title} | ${site.siteMetadata.title}`
+            },
+            {
+              property: `og:description`,
+              content: bodyText.childMarkdownRemark.excerpt,
+            },
+            {
+              property: `og:image`,
+              content: `https:${featuredImage.file.url.split('?')[0]}`,
+            }
+        ]}
+        >
+      </Helmet>
+      <Section names="blog-post">
+        <div className="mb-8">
+          <h1 className="mb-2">{title}</h1>
+          <p>{formatDate(date)}</p>
+          {tags && (
+            <div className="tags">
+              {tags.map(tag => (
+                <a
+                  className="tag inline-block text-white bg-grey-dark rounded text-sm px-2 py-1 no-underline hover:underline"
+                  href={`/blog?category=${tag}`}
+                  key={tag}>
+                  {tag}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="blog-post-content">
+          <div className="blog-content" dangerouslySetInnerHTML={{ __html: bodyText.childMarkdownRemark.html }}></div>
+          <div className="featured-image mb-8 md:w-1/2 m-auto">
+            {featuredImage && (
+                <img alt={title} src={featuredImage.fluid.src} srcSet={featuredImage.fluid.srcSet} sizes={featuredImage.fluid.sizes} />
+            )}
+          </div>
+        </div>
+        <Link to="/blog">View more posts</Link>
+      </Section>
+    </Layout>
+  );
+};
+
+
+export const pageQuery = graphql`
+  query($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    contentfulBlogPost(slug: { eq: $slug }) {
+        title
+        date
+        featuredImage {
+            id
+            fluid {
+                src
+                srcSet
+                sizes
+            }
+            file {
+              url
+            }
+        }
+        # tags
+        bodyText {
+            childMarkdownRemark {
+                excerpt
+                html
+            }
+        }
+    }
+  }
+`;
+
+export default BlogPost;
