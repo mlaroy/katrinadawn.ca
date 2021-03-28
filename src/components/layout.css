@@ -301,12 +301,12 @@ footer .logo-img {
   max-width: 100%;
 } */
 
-.blog-post-content img {
+/* .blog-post-content img {
   display: block;
   max-width: none;
   margin: 40px 0;
   width: 100%;
-}
+} */
 
 .blog-roll {
   display: grid;

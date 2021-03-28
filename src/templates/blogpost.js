@@ -1,10 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Section from '../components/Section';
 import { formatDate } from '../utils/dates';
 import Helmet from 'react-helmet';
-
 
 const BlogPost = ({ data }) => {
   const { title, bodyText, featuredImage, tags, date } = data.contentfulBlogPost;
@@ -51,12 +50,20 @@ const BlogPost = ({ data }) => {
           )}
         </div>
         <div className="blog-post-content">
-          <div className="blog-content" dangerouslySetInnerHTML={{ __html: bodyText.childMarkdownRemark.html }}></div>
-          <div className="featured-image mb-8 md:w-1/2 m-auto">
+          <div
+            className="blog-content">
             {featuredImage && (
-                <img alt={title} src={featuredImage.fluid.src} srcSet={featuredImage.fluid.srcSet} sizes={featuredImage.fluid.sizes} />
-            )}
+              <img
+              alt={title}
+              src={featuredImage.fluid.src}
+              srcSet={featuredImage.fluid.srcSet}
+              sizes={featuredImage.fluid.sizes}
+              className="lg:ml-4 lg:mb-4 block mx-auto lg:float-right md:w-2/5" />
+              )}
+            <span dangerouslySetInnerHTML={{ __html: bodyText.childMarkdownRemark.html }} />
           </div>
+          {/* <div className="featured-image mb-8 md:w-1/2 m-auto">
+          </div> */}
         </div>
         <Link to="/blog">View more posts</Link>
       </Section>
