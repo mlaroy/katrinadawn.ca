@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Section from '../components/Section';
@@ -58,7 +58,7 @@ const BlogPost = ({ data }) => {
               src={featuredImage.fluid.src}
               srcSet={featuredImage.fluid.srcSet}
               sizes={featuredImage.fluid.sizes}
-              className="lg:ml-4 lg:mb-4 block mx-auto lg:float-right md:w-2/5" />
+              className="lg:ml-4 mb-8 lg:mb-4 block mx-auto lg:float-right md:w-2/5" />
               )}
             <span dangerouslySetInnerHTML={{ __html: bodyText.childMarkdownRemark.html }} />
           </div>

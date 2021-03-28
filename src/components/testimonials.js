@@ -17,13 +17,14 @@ const Testimonials = () => (
         slidesToShow: 1,
         slidesToScroll: 1
       };
+      console.log(allMarkdownRemark.edges);
       return (
         <>
           <section className="testimonials-container">
             <div className="container">
               <h2 className="text-center">Testimonials</h2>
               <Slider {...settings} className="md:w-4/5 mx-auto testimonials">
-                {allMarkdownRemark.edges.map(edge => {
+                {allMarkdownRemark.edges.filter(({node}) => node.frontmatter.name).map(edge => {
                   const { name, location, quote } = edge.node.frontmatter;
                   return (
                     <div className="text-center" key={name}>
