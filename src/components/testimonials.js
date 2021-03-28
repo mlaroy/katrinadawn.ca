@@ -17,7 +17,7 @@ const Testimonials = () => (
         slidesToShow: 1,
         slidesToScroll: 1
       };
-      console.log(allMarkdownRemark.edges);
+
       return (
         <>
           <section className="testimonials-container">
