@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 const BlogPost = ({ data }) => {
   const { title, bodyText, featuredImage, tags, date } = data.contentfulBlogPost;
   const { site } = data;
-  console.log({featuredImage});
+
   return (
     <Layout>
       <Helmet
@@ -73,13 +73,13 @@ const BlogPost = ({ data }) => {
 
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query($id: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulBlogPost(id: { eq: $id }) {
         title
         date
         featuredImage {
