@@ -43,7 +43,7 @@ const ContentfulPets = props => (
 
 const PETS_QUERY = graphql`
   query PetsPosts {
-    allContentfulBlogPost(limit: 8, filter: {tags: {eq: "Pet Portrait"}}, sort: {order: DESC, fields: [date]}) {
+    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Pet Portrait"}}, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title

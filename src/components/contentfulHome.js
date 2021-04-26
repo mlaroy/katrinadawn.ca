@@ -43,7 +43,7 @@ const ContentfulHome = props => (
 
 const HOME_QUERY = graphql`
   query HomePosts {
-    allContentfulBlogPost(limit: 8, filter: {tags: {eq: "Home portrait"}}, sort: {order: DESC, fields: [date]}) {
+    allContentfulBlogPost(limit: 16, filter: {tags: {eq: "Home portrait"}}, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title

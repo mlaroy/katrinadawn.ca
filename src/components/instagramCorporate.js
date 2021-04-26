@@ -37,7 +37,7 @@ const InstagramCorporate = props => (
 const INSTA_QUERY = graphql`
   query CorporateQuery {
     allInstaNode(
-      limit: 4
+      limit: 8
       filter: {
         caption: {
           regex: "/#corporateart/"
