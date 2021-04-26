@@ -12,11 +12,10 @@ const ContentfulPets = props => (
             <div className="lg:w-3/4">
               <h2>Pet Portraits</h2>
               <p>
-                A pet is like another member of the family. Who but the family can recall with fondness the rambunctious puppy years, sassy swing of a cat tail, or just comfort of their presence? Sometimes your pet is truly the best company.
+                A pet is member of the family, and sometimes is better company than anybody else.
+                Here are some pet portraits I’ve had the honour of working on over the years.
+                Click an image to read the associated blog post.
               </p>
-              <p>
-              Clients should submit multiple photos. Clear photos taken with good natural light are best to showcase the colour of the fur/hair Be sure to send a photo capturing the eyes and avoid sending photos taken with a flash.
-              The recommended minimum size for a pet portrait is 6x8.</p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
               {allContentfulBlogPost.edges.map(edge => {
