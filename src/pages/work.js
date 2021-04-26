@@ -12,17 +12,10 @@ class Commissions extends Component {
     return (
       <Layout>
         <Section>
-          <h1 className="mb-4">Commissions</h1>
+          <h1 className="mb-4">Work</h1>
           <div className="lg:w-3/4">
-            <p>
-              It is an honour to capture a personal story in a painting.
-            </p>
-            <p>
-              The best response I get upon delivering a commission is tears. Tears signify that I struck a chord; that I captured an <em>essence</em> known to the recipient. That I did my job as an artist and was attentive to detail, persistent in mixing the precise shade of colour needed, and able through my brush and pen strokes to transform a memory into a piece of art.
-            </p>
-            <p>
-              Two themes of commissions have emerged over the years: Home Portraits and Pet Portraits.
-            </p>
+            <p>It is an honour to capture a personal story through a commissioned painting.</p>
+            <p>Two prominent themes of commissions have emerged over the years: Home Portraits and Pet Portraits.</p>
           </div>
         </Section>
         <ContentfulHome />
