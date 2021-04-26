@@ -22,7 +22,7 @@ const ContentfulPets = props => (
               {allContentfulBlogPost.edges.map(edge => {
                 const img = edge.node.featuredImage;
                 return (
-                  <a href={`/blog/${kebabCase(edge.node.title)}`} key={edge.node.id}>
+                  <a href={`/blog/${edge.node.slug}`} key={edge.node.id}>
                     {img && (
                       <img
                         alt={edge.node.title}
@@ -49,6 +49,7 @@ const PETS_QUERY = graphql`
         node {
           title
           tags
+          slug
           featuredImage {
             id
             contentful_id

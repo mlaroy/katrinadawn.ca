@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout';
 import Section from '../components/Section';
-import InstagramHome from '../components/instagramHome'
+import ContentfulHome from '../components/contentfulHome'
 // import InstagramPets from '../components/instagramPets'
 import ContentfulPets from '../components/contentfulPets'
 import InstagramCorporate from '../components/instagramCorporate'
@@ -25,7 +25,7 @@ class Commissions extends Component {
             </p>
           </div>
         </Section>
-        <InstagramHome/>
+        <ContentfulHome />
         <ContentfulPets />
         <InstagramCorporate />
         <Bumper bg="bg-white">

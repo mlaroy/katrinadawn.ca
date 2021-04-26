@@ -17,16 +17,17 @@ class Blog extends Component {
               <div className="blog-roll">
                 {allContentfulBlogPost.edges.map(edge => {
                   const img = edge.node.featuredImage;
+                  const slug = edge.node.slug.toLowerCase();
                   return (
                     <article key={edge.node.contentful_id} className="shadow-md hover:shadow-lg blog-post">
                       {img && (
-                        <Link to={`/blog/${kebabCase(edge.node.title)}`} className="block">
+                        <Link to={`/blog/${slug}`} className="block">
                           <img src={img.file.url} alt=""/>
                         </Link>
                       )}
                       <div className="p-4">
                         <h2 className="mb-2 text-lg">
-                          <Link to={`/blog/${kebabCase(edge.node.title)}`} className="link no-underline hover:underline focus:underline">
+                          <Link to={`/blog/${slug}`} className="link no-underline hover:underline focus:underline">
                             {edge.node.title}
                           </Link>
                         </h2>

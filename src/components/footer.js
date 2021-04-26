@@ -10,7 +10,7 @@ class Footer extends Component {
         <p className="mb-0">
           <small>© {year} KatrinaDawnStudio. All rights reserved.</small>
         </p>
-        <p className="text-xs">Website by <a className="link" href="https://mikelaroy.ca">Michael LaRoy</a></p>
+        <p className="text-xs">Website by <a className="link" href="https://cascadia.digital">Cascadia Digital</a></p>
       </footer>
     );
   }
