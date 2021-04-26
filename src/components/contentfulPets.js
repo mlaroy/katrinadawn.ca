@@ -12,7 +12,7 @@ const ContentfulPets = props => (
             <div className="lg:w-3/4">
               <h2>Pet Portraits</h2>
               <p>
-                A pet is member of the family, and sometimes is better company than anybody else.
+                A pet is a member of the family, and sometimes is better company than anybody else.
                 Here are some pet portraits I’ve had the honour of working on over the years.
                 Click an image to read the associated blog post.
               </p>
