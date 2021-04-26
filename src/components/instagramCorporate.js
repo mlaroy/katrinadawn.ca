@@ -9,10 +9,10 @@ const InstagramCorporate = props => (
         <section style={{ background: '#ddd'}} id="corporate">
           <div className="container">
             <div className="lg:w-3/4">
-              <h2>Corporate</h2>
+              <h2>Businesses</h2>
               <p>
-                Corporations or small business owners are welcome to submit imagery or a detailed concept of what they would like captured through watercolour sketching. In addition to the original, replicates of the painting in print material or digital format are available for a licensing fee.
-                Below are a few corporate customers that I have worked with.
+                Aside from being contacted for private commissions, I’ve also had opportunity to work
+                with several businesses in helping to bring their brand identity to life.
               </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
