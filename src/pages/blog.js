@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import Section from '../components/Section';
 import { Link } from 'gatsby';
 import { formatDate } from '../utils/dates';
-import { kebabCase } from '../utils/kebab'
+// import { kebabCase } from '../utils/kebab'
 class Blog extends Component {
   render() {
     return (

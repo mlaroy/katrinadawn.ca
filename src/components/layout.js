@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Nav from './nav';
 import Footer from './footer';
+import Newsletter from './newsletter'
 
 import './layout.css'
 
@@ -32,6 +33,7 @@ const Layout = ({ children }) => (
           <Nav />
           {children}
           <Footer />
+          <Newsletter heading="Subscribe to my Newsletter" />
       </>
     )}
   />

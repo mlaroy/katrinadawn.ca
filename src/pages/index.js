@@ -6,6 +6,7 @@ import Instagram from '../components/instagram'
 import Testimonials from '../components/testimonials'
 import Bumper from '../components/bumper'
 
+
 const IndexPage = () => (
   <Layout>
     <Hero />

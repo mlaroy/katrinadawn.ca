@@ -314,6 +314,36 @@ footer .logo-img {
   grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.newsletter {
+  width: 400px;
+  max-width: 100%;
+  transition: transform 0.75s ease-out;
+  transform: translateY(0);
+}
+
+.newsletter.is-hidden {
+  transform: translateY(110%);
+}
+
+.newsletter-message {
+  min-height: 24px;
+}
+
+.newsletter-hide-button {
+  position: absolute;
+  right: 1rem;
+  transform: translateY(-100%);
+}
+
+.newsletter-hide-button > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 @tailwind utilities;
