@@ -184,8 +184,19 @@ footer .logo-img {
   font-size: 1rem;
 }
 
+.btn.btn-small {
+  padding: 0.1rem 0.2rem;
+}
+
 .btn.btn-inverse {
   background: #e6e9df;
+  border-radius: 5px;
+  color: #222;
+  border: 1px solid #e6e9df;
+}
+
+.btn.btn-outline-inverse {
+  background: #fff;
   border-radius: 5px;
   color: #222;
   border: 1px solid #e6e9df;
