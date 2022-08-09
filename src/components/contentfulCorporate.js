@@ -2,19 +2,18 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby'
 // import { kebabCase } from '../utils/kebab'
 
-const ContentfulPets = props => (
+const ContentfulCorporate = props => (
   <StaticQuery
-    query={PETS_QUERY}
+    query={CORP_QUERY}
     render={({ allContentfulBlogPost }) => (
       <>
-        <section>
+        <section style={{ background: '#ddd'}} id="corporate">
           <div className="container">
             <div className="lg:w-3/4">
-              <h2>Pet Portraits</h2>
+              <h2>Businesses</h2>
               <p>
-                A pet is a member of the family, and sometimes is better company than anybody else.
-                Here are some pet portraits I’ve had the honour of working on over the years.
-                Click an image to read the associated blog post.
+                Aside from being contacted for private commissions, I’ve also had opportunity to work
+                with several businesses in helping to bring their brand identity to life.
               </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
@@ -41,9 +40,9 @@ const ContentfulPets = props => (
   />
 );
 
-const PETS_QUERY = graphql`
-  query PetsPosts {
-    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Pet Portrait"}}, sort: {order: DESC, fields: [date]}) {
+const CORP_QUERY = graphql`
+  query CorporatePosts {
+    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Business Commissions"}}, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title
@@ -64,4 +63,4 @@ const PETS_QUERY = graphql`
   }
 `
 
-export default ContentfulPets;
+export default ContentfulCorporate;

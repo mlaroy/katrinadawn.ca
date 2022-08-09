@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby'
-import { kebabCase } from '../utils/kebab'
+// import { kebabCase } from '../utils/kebab'
 
 const ContentfulHome = props => (
   <StaticQuery

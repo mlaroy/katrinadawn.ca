@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Layout from '../components/layout';
 import Section from '../components/Section';
 import ContentfulHome from '../components/contentfulHome'
+import ContentfulCorporate from '../components/contentfulCorporate'
 // import InstagramPets from '../components/instagramPets'
 import ContentfulPets from '../components/contentfulPets'
-import InstagramCorporate from '../components/instagramCorporate'
+// import InstagramCorporate from '../components/instagramCorporate'
 import Bumper from '../components/bumper'
 
 class Commissions extends Component {
@@ -20,7 +21,7 @@ class Commissions extends Component {
         </Section>
         <ContentfulHome />
         <ContentfulPets />
-        <InstagramCorporate />
+        <ContentfulCorporate />
         <Bumper bg="bg-white">
           <h2>Contact Katrina Dawn for commissions</h2>
           <p>

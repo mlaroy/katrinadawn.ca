@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout';
 import Section from '../components/Section';
@@ -6,14 +6,60 @@ import CategoriesFilter from '../components/categoriesFilter';
 import { Link } from 'gatsby';
 import { formatDate } from '../utils/dates';
 // import { kebabCase } from '../utils/kebab'
+
 const Blog = () => {
 
     const [activeTags, setActiveTags] = useState([]);
 
-    useEffect(() => {
-      console.log({ activeTags })
-    }, [activeTags]);
+    const setQueryStringWithoutPageReload = qsValue => {
+        const newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}${qsValue}`;
+        window.history.pushState({ path: newurl }, '', newurl);
+    };
 
+    const createTagObject = tag => {
+      return {
+          name: tag,
+          slug: tag.toLowerCase().replace(' ', '-'),
+      }
+    }
+
+  const createTagObjectFromSlug = tag => {
+    return {
+        name: tag.replace('-', ' '),
+        slug: tag,
+    }
+  }
+
+    // const setActiveTagsFromQueryString = () => {
+    //   const qs = new URLSearchParams(window.location.search);
+    //   if(qs.has('filter')) {
+    //     const tags = qs.get('filter').toLowerCase();
+    //     console.log({tags});
+
+    //     if (setActiveTags.length < 1) {
+    //       setActiveTags(tags.split(',').map(tag => createTagObjectFromSlug(tag)));
+    //     }
+    //   }
+    // }
+
+    // set once
+    useEffect(() => {
+      const qs = new URLSearchParams(window.location.search);
+      if(qs.has('filter')) {
+        const tags = qs.get('filter').toLowerCase();
+        console.log({tags});
+        setActiveTags(tags.split(',').map(tag => createTagObjectFromSlug(tag)));
+      };
+    }, [])
+
+    useEffect(() => {
+      console.log(activeTags)
+      if( activeTags.length > 0 ) {
+        setQueryStringWithoutPageReload(`?filter=${activeTags.map(tag => tag.slug).join(',')}`)
+      } else {
+        setQueryStringWithoutPageReload('')
+      }
+    }, [activeTags]);
 
   return (
     <StaticQuery
@@ -26,14 +72,16 @@ const Blog = () => {
               categories={allContentfulBlogPost}
               activeTags={activeTags}
               setActiveTags={setActiveTags}
+              createTagObject={createTagObject}
             />
             <div className="blog-roll">
               {allContentfulBlogPost.edges
                 .filter(edge => {
-                  if(activeTags.length === 0) {
+                  if( activeTags.length === 0 ) {
                     return true;
                   }
-                  return edge.node.tags !== null && edge.node.tags.some(tag => activeTags.includes(tag));
+                  console.log(edge.node.tags)
+                  return edge.node.tags !== null && edge.node.tags.some(tag => activeTags.some(activeTag => activeTag.name.toLowerCase() === tag.toLowerCase()));
                 })
               .map(edge => {
                 const img = edge.node.featuredImage;
@@ -56,7 +104,7 @@ const Blog = () => {
                       <p>
                         {edge.node.tags && edge.node.tags.map(tag => {
                           return (
-                            <span className="btn btn-inverse btn-small text-xs">{tag}</span>
+                            <span key={tag} className="btn btn-inverse btn-small text-xs capitalize">{tag}</span>
                           )
                         })}
                       </p>

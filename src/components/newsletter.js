@@ -16,6 +16,8 @@ const Newsletter = ({ heading }) => {
     const [message, setMessage] = useState(null);
     const [isError, setIsError] = useState(false);
 
+    // console.log(result)
+
     // const [translated, setTranslated] = useState('is-hidden');
 
     const handleSubmit = async (e) => {
@@ -32,6 +34,7 @@ const Newsletter = ({ heading }) => {
             setMessage(response.msg);
             setIsError(true);
             setResult(null);
+            console.error(result);
         }
 
         if( response.result === 'success') {
@@ -58,7 +61,7 @@ const Newsletter = ({ heading }) => {
                 setIsHidden(false);
             }
         }, 8000);
-    }, [changeNewsletterState])
+    }, [changeNewsletterState, isNewsletterHidden])
 
     return (
         <div className={`newsletter block p-4 pb-6 fixed pin-r pin-b z-50 rounded shadow-lg bg-white ${isHidden ? 'is-hidden' : ''}`}>

@@ -185,7 +185,7 @@ footer .logo-img {
 }
 
 .btn.btn-small {
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.5rem;
 }
 
 .btn.btn-inverse {
@@ -216,6 +216,14 @@ footer .logo-img {
 
 .btn + .btn {
   margin-left: 1rem;
+}
+
+.btn-small + .btn-small {
+  margin-left: 0.5rem;
+}
+
+[class^="gap-"] .btn + .btn {
+  margin-left: 0;
 }
 
 .instafeed {

@@ -6,7 +6,7 @@ import { formatDate } from '../utils/dates';
 import Helmet from 'react-helmet';
 
 const BlogPost = ({ data }) => {
-  const { title, bodyText, featuredImage, tags, date } = data.contentfulBlogPost;
+  const { title, bodyText, featuredImage, date } = data.contentfulBlogPost;
   const { site } = data;
 
   return (
@@ -36,7 +36,7 @@ const BlogPost = ({ data }) => {
         <div className="mb-8">
           <h1 className="mb-2">{title}</h1>
           <p>{formatDate(date)}</p>
-          {tags && (
+          {/* {tags && (
             <div className="tags">
               {tags.map(tag => (
                 <a
@@ -47,7 +47,7 @@ const BlogPost = ({ data }) => {
                 </a>
               ))}
             </div>
-          )}
+          )} */}
         </div>
         <div className="blog-post-content">
           <div
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
               url
             }
         }
-        # tags
+        tags
         bodyText {
             childMarkdownRemark {
                 excerpt

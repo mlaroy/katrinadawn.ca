@@ -20,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
               id
               title
               slug
+              tags
             }
           }
         }
@@ -33,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
       const blogPostTemplate = path.resolve('./src/templates/blogpost.js');
       // Then for each result we create a page.
       result.data.allContentfulBlogPost.edges.forEach(edge => {
+        console.log(edge.node.tags)
         const slug = edge.node.slug.toLowerCase();
         createPage({
           path: `/blog/${slug}/`,
