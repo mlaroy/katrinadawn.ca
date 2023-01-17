@@ -10,10 +10,10 @@ const ContentfulCorporate = props => (
         <section style={{ background: '#ddd'}} id="corporate">
           <div className="container">
             <div className="lg:w-3/4">
-              <h2>Businesses</h2>
+              <h2>Custom Commissions</h2>
               <p>
-                Aside from being contacted for private commissions, I’ve also had opportunity to work
-                with several businesses in helping to bring their brand identity to life.
+              Aside from being contacted for pet and home portraits, I’ve also had the opportunity to
+              work on several unique commissions, both for individuals and local businesses
               </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
