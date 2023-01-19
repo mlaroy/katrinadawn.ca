@@ -42,7 +42,7 @@ const ContentfulCorporate = props => (
 
 const CORP_QUERY = graphql`
   query CorporatePosts {
-    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Business Commissions"}}, sort: {order: DESC, fields: [date]}) {
+    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Custom Commissions"}}, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title

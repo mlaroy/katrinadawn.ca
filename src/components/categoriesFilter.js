@@ -11,6 +11,8 @@ const CategoriesFilter = ({ categories, activeTags, setActiveTags, createTagObje
         .filter(tag => tag !== null)
         .map(tag => createTagObject(tag))
 
+    console.log({ tags })
+
 
     const handleUpdateTags = (tagObj) => {
         // const tagObj = createTagObject(tag);
