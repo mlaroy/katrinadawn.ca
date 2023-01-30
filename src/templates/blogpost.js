@@ -9,7 +9,7 @@ const BlogPost = ({ data }) => {
   const { title, bodyText, featuredImage, date } = data.contentfulBlogPost;
   const { site } = data;
 
-  const rendered = bodyText.childMarkdownRemark.html.replaceAll(' "', ' “');
+  const rendered = bodyText.childMarkdownRemark.html.replace(/ "/g, ' “');
   return (
     <Layout>
       <Helmet
