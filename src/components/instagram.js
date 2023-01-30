@@ -15,7 +15,7 @@ const Instagram = () => (
                   <a href={`https://www.instagram.com/p/${edge.node.id}`} key={edge.node.id}>
                     <img
                       alt={`${edge.node.caption.substring(0, 100)}...`}
-                      src={edge.node.original}
+                      src={edge.node.mediaType === 'VIDEO' ? edge.node.preview : edge.node.original}
                       />
                   </a>
                 )
@@ -37,11 +37,14 @@ const INSTA_QUERY = graphql`
         order: DESC
       }
     ) {
+
       edges {
         node {
           id
           caption
           original
+          mediaType
+          preview
         }
       }
     }
