@@ -85,7 +85,7 @@ const Blog = () => {
               .map(edge => {
                 const img = edge.node.featuredImage;
                 const slug = edge.node.slug.toLowerCase();
-                const rendered = edge.node.bodyText.childMarkdownRemark.excerpt.replaceAll(' "', ' “');
+                const rendered = edge.node.bodyText.childMarkdownRemark.excerpt.replace(/ "/g, ' “');
                 return (
                   <article key={edge.node.contentful_id} className="shadow-md hover:shadow-lg blog-post">
                     {img && (
