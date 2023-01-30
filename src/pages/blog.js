@@ -86,6 +86,7 @@ const Blog = () => {
               .map(edge => {
                 const img = edge.node.featuredImage;
                 const slug = edge.node.slug.toLowerCase();
+                const rendered = edge.node.bodyText.childMarkdownRemark.excerpt.replaceAll(' "', ' “');
                 return (
                   <article key={edge.node.contentful_id} className="shadow-md hover:shadow-lg blog-post">
                     {img && (
@@ -100,7 +101,7 @@ const Blog = () => {
                         </Link>
                       </h2>
                       <p className="text-xs mb-4">{formatDate(edge.node.date)}</p>
-                      <p className="text-sm mb-4" dangerouslySetInnerHTML={{ __html: edge.node.bodyText.childMarkdownRemark.excerpt }}></p>
+                      <p className="text-sm mb-4" dangerouslySetInnerHTML={{ __html: rendered }}></p>
                       <p>
                         {edge.node.tags && edge.node.tags.map(tag => {
                           return (

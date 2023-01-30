@@ -8,7 +8,8 @@ class Hero extends Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
   state = {
-    transform: ''
+    transform: '',
+    opacity: '',
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -17,15 +18,16 @@ class Hero extends Component {
   handleScroll = () => {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop;
     this.setState({
-      transform: `translate3d(0, ${scrolled * 0.3}px, 0)`
+      transform: `translate3d(0, ${scrolled * 0.3}px, 0)`,
+      opacity: `${1 - (scrolled * 0.001)}`
     })
   }
 
   render() {
-    const { transform } = this.state;
+    const { transform, opacity } = this.state;
     return (
-      <header>
-        <div className="header-content fade-in" style={{ transform }}>
+      <header className="fade-in">
+        <div className="header-content" style={{ transform, opacity }}>
           <h1>
             <span className="screen-reader">Katrina Dawn Studio</span>
             <img src={logo} alt="Katrina Dawn Studio Logo" className="logo-img" />

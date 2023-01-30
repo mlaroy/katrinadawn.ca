@@ -9,6 +9,7 @@ const BlogPost = ({ data }) => {
   const { title, bodyText, featuredImage, date } = data.contentfulBlogPost;
   const { site } = data;
 
+  const rendered = bodyText.childMarkdownRemark.html.replaceAll(' "', ' “');
   return (
     <Layout>
       <Helmet
@@ -60,7 +61,7 @@ const BlogPost = ({ data }) => {
               sizes={featuredImage.fluid.sizes}
               className="lg:ml-4 mb-8 lg:mb-4 block mx-auto lg:float-right md:w-2/5" />
               )}
-            <span dangerouslySetInnerHTML={{ __html: bodyText.childMarkdownRemark.html }} />
+            <span dangerouslySetInnerHTML={{ __html: rendered }} />
           </div>
           {/* <div className="featured-image mb-8 md:w-1/2 m-auto">
           </div> */}

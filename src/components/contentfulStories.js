@@ -2,18 +2,18 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby'
 // import { kebabCase } from '../utils/kebab'
 
-const ContentfulCorporate = props => (
+const ContentfulStories = props => (
   <StaticQuery
-    query={CORP_QUERY}
+    query={STORY_QUERY}
     render={({ allContentfulBlogPost }) => (
       <>
-        <section style={{ background: '#fff'}} id="corporate">
+        <section style={{ background: '#ddd'}} id="stories">
           <div className="container">
             <div className="lg:w-3/4">
-              <h2>Custom Commissions</h2>
+              <h2>Story Portraits</h2>
               <p>
-              Aside from being contacted for pet and home portraits, I’ve also had the opportunity to
-              work on several unique commissions, both for individuals and local businesses
+              Story Portraits are a unique way to showcase a montage of memories. Customized to include as few or as many elements as desired, spanning a short or long time frame,
+              a Story Portrait makes for an extra-thoughtful gift for someone special.
               </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
@@ -40,9 +40,9 @@ const ContentfulCorporate = props => (
   />
 );
 
-const CORP_QUERY = graphql`
-  query CorporatePosts {
-    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Custom Commissions"}}, sort: {order: DESC, fields: [date]}) {
+const STORY_QUERY = graphql`
+  query StoryPosts {
+    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Story Portrait"}}, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title
@@ -63,4 +63,4 @@ const CORP_QUERY = graphql`
   }
 `
 
-export default ContentfulCorporate;
+export default ContentfulStories;

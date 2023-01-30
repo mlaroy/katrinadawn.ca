@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import Section from '../components/Section';
 import ContentfulHome from '../components/contentfulHome'
 import ContentfulCorporate from '../components/contentfulCorporate'
+import ContentfulStories from '../components/contentfulStories'
 // import InstagramPets from '../components/instagramPets'
 import ContentfulPets from '../components/contentfulPets'
 // import InstagramCorporate from '../components/instagramCorporate'
@@ -21,6 +22,7 @@ class Commissions extends Component {
         </Section>
         <ContentfulHome />
         <ContentfulPets />
+        <ContentfulStories />
         <ContentfulCorporate />
         <Bumper bg="bg-white">
           <h2>Contact Katrina Dawn for commissions</h2>

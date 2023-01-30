@@ -5,7 +5,8 @@ import Section from '../components/Section';
 
 const BlogList = ({ data }) => {
   const { title, content, featuredImage, tags, publishDate } = data.contentfulBlogPost;
-  console.log(featuredImage);
+  // console.log(featuredImage);
+
   return (
     <Layout>
       <Section names="blog-post">
