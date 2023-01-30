@@ -80,7 +80,6 @@ const Blog = () => {
                   if( activeTags.length === 0 ) {
                     return true;
                   }
-                  console.log(edge.node.tags)
                   return edge.node.tags !== null && edge.node.tags.some(tag => activeTags.some(activeTag => activeTag.name.toLowerCase() === tag.toLowerCase()));
                 })
               .map(edge => {
