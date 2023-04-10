@@ -10,15 +10,18 @@ const Instagram = () => (
           <div className="container text-center">
             <h2>See Katrina Dawn on Instagram</h2>
             <div id="instafeed" className="instafeed is-visible">
-              {allInstaNode.edges.map(edge => {
-                return (
-                  <a href={`https://www.instagram.com/p/${edge.node.id}`} key={edge.node.id}>
-                    <img
-                      alt={`${edge.node.caption.substring(0, 100)}...`}
-                      src={edge.node.mediaType === 'VIDEO' ? edge.node.preview : edge.node.original}
-                      />
-                  </a>
-                )
+              {allInstaNode.edges
+                .filter(edge => edge.node.mediaType === 'IMAGE')
+                .slice(0, 12)
+                .map(edge => {
+                  return (
+                    <a href={`https://www.instagram.com/p/${edge.node.id}`} key={edge.node.id}>
+                      <img
+                        alt={`${edge.node.caption.substring(0, 100)}...`}
+                        src={edge.node.mediaType === 'VIDEO' ? edge.node.preview : edge.node.original}
+                        />
+                    </a>
+                  )
               })}
             </div>
           </div>
