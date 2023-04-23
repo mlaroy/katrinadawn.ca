@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 const ContentfulPets = props => (
   <StaticQuery
     query={PETS_QUERY}
-    render={({ allContentfulBlogPost }) => (
+    render={({ allContentfulPetPortrait }) => (
       <>
         <section>
           <div className="container">
@@ -18,10 +18,10 @@ const ContentfulPets = props => (
               </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
-              {allContentfulBlogPost.edges.map(edge => {
+              {allContentfulPetPortrait.edges.map(edge => {
                 const img = edge.node.featuredImage;
                 return (
-                  <a href={`/blog/${edge.node.slug}`} key={edge.node.id}>
+                  <a href={`/blog/${edge.node.blogPostReference.slug}`} key={edge.node.blogPostReference.slug}>
                     {img && (
                       <img
                         alt={edge.node.title}
@@ -43,20 +43,20 @@ const ContentfulPets = props => (
 
 const PETS_QUERY = graphql`
   query PetsPosts {
-    allContentfulBlogPost(limit: 12, filter: {tags: {eq: "Pet Portrait"}}, sort: {order: DESC, fields: [date]}) {
+    allContentfulPetPortrait(limit: 12, sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title
-          tags
-          slug
+          date
           featuredImage {
-            id
-            contentful_id
             fluid {
-              src
-              srcSet
-              sizes
+                src
+                srcSet
             }
+          }
+          blogPostReference {
+            slug
+            id
           }
         }
       }

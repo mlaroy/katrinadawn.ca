@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mailchimp/
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+// import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { CloseOutline } from 'react-ionicons'
 import NewsletterForm from './newsletter-form';
 
