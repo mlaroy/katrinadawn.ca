@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 const ContentfulHome = props => (
   <StaticQuery
     query={HOME_QUERY}
-    render={({ allContentfulBlogPost }) => (
+    render={({ allContentfulHomePortrait }) => (
       <>
         <section style={{ background: '#ddd'}}>
           <div className="container">
@@ -18,10 +18,10 @@ const ContentfulHome = props => (
                 </p>
             </div>
             <div id="instafeed" className="instafeed is-visible mt-8">
-              {allContentfulBlogPost.edges.map(edge => {
+              {allContentfulHomePortrait.edges.map(edge => {
                 const img = edge.node.featuredImage;
                 return (
-                  <a href={`/blog/${edge.node.slug.toLowerCase()}`} key={edge.node.id}>
+                  <a href={`/blog/${edge.node.blogPostReference.slug}`} key={edge.node.blogPostReference.slug}>
                     {img && (
                       <img
                         alt={edge.node.title}
@@ -43,20 +43,20 @@ const ContentfulHome = props => (
 
 const HOME_QUERY = graphql`
   query HomePosts {
-    allContentfulBlogPost(limit: 16, filter: {tags: {eq: "Home portrait"}}, sort: {order: DESC, fields: [date]}) {
+    allContentfulHomePortrait(sort: {order: DESC, fields: [date]}) {
       edges {
         node {
           title
-          tags
-          slug
+          date
           featuredImage {
-            id
-            contentful_id
             fluid {
-              src
-              srcSet
-              sizes
+                src
+                srcSet
             }
+          }
+          blogPostReference {
+            slug
+            id
           }
         }
       }

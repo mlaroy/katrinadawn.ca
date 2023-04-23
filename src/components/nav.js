@@ -17,7 +17,7 @@ class Nav extends Component {
           <Link to="/pricing" className="nav-link hover:underline focus:underline">Pricing</Link>
           <Link to="/blog" className="nav-link hover:underline focus:underline">Blog</Link>
           <Link to="/contact" className="nav-link hover:underline focus:underline">Contact</Link>
-          <Link to="https://www.etsy.com/shop/KatrinaDawnStudio" className="btn btn-inverse">Shop</Link>
+          <a href="https://www.etsy.com/shop/KatrinaDawnStudio" className="btn btn-inverse">Shop</a>
         </nav>
       </div>
     );
