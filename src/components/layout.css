@@ -382,5 +382,14 @@ footer .logo-img {
   align-items: center;
 }
 
+.compare-image {
+  aspect-ratio: 840/670;
+}
+
+.compare-image img {
+  object-fit: cover;
+}
+
 
 @tailwind utilities;
+
