@@ -134,6 +134,7 @@ const POST_ARCHIVE_QUERY = graphql`
           slug
           date
           tags
+          isFeatured
           bodyText {
             childMarkdownRemark {
               excerpt

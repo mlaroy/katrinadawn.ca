@@ -5,6 +5,7 @@ import Hero from '../components/hero'
 import Instagram from '../components/instagram'
 import Testimonials from '../components/testimonials'
 import Bumper from '../components/bumper'
+import ContentfulFeaturedPost from '../components/contentfulFeaturedPost'
 import ContentfulBlogTeaser from '../components/contentfulBlogTeaser'
 
 
@@ -18,6 +19,7 @@ const IndexPage = () => (
         <a href="https://www.instagram.com/_katrinadawnstudio/" className="btn">Instagram</a>
       </p>
     </Bumper>
+    <ContentfulFeaturedPost />
     <ContentfulBlogTeaser />
     <Instagram />
     <Testimonials />

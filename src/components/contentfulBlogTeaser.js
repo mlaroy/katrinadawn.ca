@@ -58,7 +58,11 @@ const ContentfulCorporate = props => (
 
 const HOME_QUERY = graphql`
   query HomepagePosts {
-    allContentfulBlogPost(limit: 3, sort: {order: DESC, fields: [date]}) {
+    allContentfulBlogPost(
+      limit: 3,
+      sort: {order: DESC, fields: [date]}
+      filter: {isFeatured: {ne: true}}
+    ) {
       edges {
         node {
           contentful_id

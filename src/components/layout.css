@@ -330,6 +330,12 @@ footer .logo-img {
   transition: all 0.3s ease;
 }
 
+.featured-post {
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
 /* .blog-post .featured-image {
   width: 100vw;
 }
