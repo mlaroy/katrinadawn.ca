@@ -45,27 +45,27 @@ const formatDate = date => {
   );
 }
 
-export const pageQuery = graphql`
-  query($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-        title
-        date
-        featuredImage {
-            id
-            fluid {
-                src
-                srcSet
-                sizes
-            }
-        }
-        # tags
-        bodyText {
-            childMarkdownRemark {
-                html
-            }
-        }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query($slug: String!) {
+//     contentfulBlogPost(slug: { eq: $slug }) {
+//         title
+//         date
+//         featuredImage {
+//             id
+//             fluid {
+//                 src
+//                 srcSet
+//                 sizes
+//             }
+//         }
+//         # tags
+//         bodyText {
+//             childMarkdownRemark {
+//                 html
+//             }
+//         }
+//     }
+//   }
+// `;
 
 export default BlogList;
