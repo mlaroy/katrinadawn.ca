@@ -2,7 +2,7 @@
 
 @tailwind components;
 
-@import url('https://fonts.googleapis.com/css?family=Catamaran|Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Catamaran|Libre+Baskerville:ital@1&display=swap');
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
