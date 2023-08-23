@@ -5,6 +5,7 @@ import Hero from '../components/hero'
 import Instagram from '../components/instagram'
 import Testimonials from '../components/testimonials'
 import Bumper from '../components/bumper'
+import PurposeStatement from '../components/purposeStatement'
 import ContentfulFeaturedPost from '../components/contentfulFeaturedPost'
 import ContentfulBlogTeaser from '../components/contentfulBlogTeaser'
 
@@ -12,6 +13,7 @@ import ContentfulBlogTeaser from '../components/contentfulBlogTeaser'
 const IndexPage = () => (
   <Layout>
     <Hero />
+    <PurposeStatement />
     <Bumper>
       <h2>Follow Katrina Dawn</h2>
       <p>
